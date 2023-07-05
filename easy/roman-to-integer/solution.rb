@@ -15,7 +15,7 @@ def roman_to_int(s)
   s.length.times do |i|
     current_roman = table[s[i]]
     next_roman = table[s[i + 1]]
-    if !next_roman? && current_roman < next_roman
+    if !next_roman.nil? && current_roman < next_roman
       result -= current_roman
       next
     end
